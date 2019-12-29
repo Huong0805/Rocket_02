@@ -21,8 +21,8 @@ DROP TABLE IF EXISTS Employee_Skill_Table;
 CREATE TABLE Employee_Skill_Table
 (
 	Employee_Number		CHAR(5) NOT NULL,
-    Skill_Code 			CHAR(5) NOT NULL,
-    Data_Registered		VARCHAR(30),
+    Skill_Code 			VARCHAR(30) NOT NULL,
+    Date_Registered		Date,
     FOREIGN KEY(Employee_Number) REFERENCES Employee_Table(Employee_Number)
 );
 
@@ -39,13 +39,15 @@ INSERT INTO Employee_Table
 		(Employee_Number,Employee_Name, Department_Number)
 VALUES  ('001', 'Le Thu Huong', 'dpt01'),
 		('002', 'Le Viet Thang', 'dpt01'),
-        ('003', 'Le Thu Mai', 'dpt02');
-
+        ('003', 'Le Thu Mai', 'dpt02'),
+		('004', 'Dinh Viet Dung', 'dpt01');
+        
 INSERT INTO Employee_Skill_Table 
-		(Employee_Number, Skill_Code, Data_Registered)
-VALUES 	('001', 'cd01', 'PHP'),
-		('001', 'cd02', 'Java'),
-        ('002', 'cd01', 'C');
+		(Employee_Number, Skill_Code, Date_Registered)
+VALUES 	('001', 'PHP','2019-12-03'),
+		('001', 'Java', '2019-11-03'),
+        ('002', 'C', '2019-12-04');
+        
 -- cau 3: lay ra nhan vien co ky nang java
 
 SELECT 
@@ -54,11 +56,10 @@ FROM
     Employee_Table E  
 JOIN 
 	Employee_Skill_Table S ON E.Employee_Number= S.Employee_Number
-WHERE Data_Registered='Java';
+WHERE Skill_Code='Java';
 
     
  -- cau 4: danh sach phong ban co 3 nv
- 
  SELECT 
     D.Department_Number, D.Department_Name
 FROM
