@@ -15,7 +15,7 @@ CREATE TABLE Trainee
 	Training_Class		CHAR(6),
     Evaluation_Notes	TEXT
 );
--- Them cot VTI_Acount
+-- Them cot VTI_Account
 ALTER TABLE trainee 
 ADD COLUMN VTI_Account CHAR(10) UNIQUE NOT NULL;
 
