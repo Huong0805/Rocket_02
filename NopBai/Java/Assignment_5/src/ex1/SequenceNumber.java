@@ -2,7 +2,7 @@ package ex1;
 
 import java.util.Scanner;
 
-public class SequenceNumber {
+public abstract class SequenceNumber implements Sort {
 	
 	public int[] arr;
 	

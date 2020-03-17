@@ -1,6 +1,6 @@
 package ex1;
 
-public class InsertSort  extends SequenceNumber implements Sort {
+public class InsertSort  extends SequenceNumber{
 
 	public InsertSort(int n) {
 		super(n);
@@ -28,15 +28,7 @@ public class InsertSort  extends SequenceNumber implements Sort {
 	        arr[j + 1] = key;  
 	    }  
 	}  
-	public static void main(String[] args) {
-		
-		InsertSort qs=new InsertSort(5);
-		qs.input();
-		qs.prints();
-        qs.Sort();
-		qs.prints();
-
-	}
+	
 
 	
 

@@ -1,6 +1,6 @@
 package ex1;
 
-public class QuickSort extends SequenceNumber implements Sort {
+public class QuickSort extends SequenceNumber {
 
 	
 	public QuickSort(int n) {
@@ -45,10 +45,5 @@ public class QuickSort extends SequenceNumber implements Sort {
 	 
 	        return start;
 	    }
-	    public static void main(String[] args) {
-			QuickSort qs=new QuickSort(5);
-			qs.input();
-	        qs.Sort();
-			qs.prints();
-		}	
+	   
 }

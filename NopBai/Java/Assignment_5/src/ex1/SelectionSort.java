@@ -1,6 +1,6 @@
 package ex1;
 
-public class SelectionSort  extends SequenceNumber implements Sort {
+public class SelectionSort  extends SequenceNumber {
 
 	public SelectionSort(int n) {
 		super(n);
@@ -29,14 +29,7 @@ public class SelectionSort  extends SequenceNumber implements Sort {
             arr[i] = temp;
         }
         }
-	public static void main(String[] args) {
-		
-		SelectionSort qs=new SelectionSort(5);
-		qs.input();
-        qs.Sort();
-		qs.prints();
-
-	}
+	
 
 	
 	
