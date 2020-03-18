@@ -25,6 +25,7 @@ public class Staffs extends Employee {
         workingTime = scanner.nextFloat();   
     }
 	
+	@Override
 	public void output() {
 		super.output();
 		System.out.print(salary());

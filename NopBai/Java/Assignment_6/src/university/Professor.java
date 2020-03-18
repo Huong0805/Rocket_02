@@ -8,7 +8,7 @@ public class Professor extends Employee  {
 	protected String faculty;			//Nang luc
 	protected float  teachingTime;		
 
-	
+	@Override
 	public void input() {
 
 		super.input();
@@ -18,6 +18,14 @@ public class Professor extends Employee  {
         System.out.print("Nhap so gio day: ");
         teachingTime = scanner.nextFloat();   
     }
+	
+	
+	@Override
+	public void output() {
+		super.output();
+		System.out.println(salary());
+		
+	}
 	
 	@Override
 	public float salary() {
@@ -31,11 +39,6 @@ public class Professor extends Employee  {
 		return salaryMultiplier*730+allowance+teachingTime*45;
 	}
 	
-	@Override
-	public void output() {
-		super.output();
-		System.out.println(salary());
-		
-	}
+	
 
 }
