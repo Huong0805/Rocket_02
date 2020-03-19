@@ -8,12 +8,16 @@ public class Staffs extends Employee {
 	protected int position;
 	protected float  workingTime;		
 	
+	
+	/**
+	 * Nhap thong tin can bo
+	 */
+	
 	@Override
 	public void input() {
 		super.input();
         System.out.print("Nhap phong ban: ");
         department = scanner.nextLine();
-        scanner.nextLine();
         
         do {
         	 System.out.print("Nhap vi tri: 1- Department head , 2-Vice head, 3-Staff ");
@@ -24,13 +28,40 @@ public class Staffs extends Employee {
         System.out.print("Nhap so gio lam viec: ");
         workingTime = scanner.nextFloat();   
     }
+	/**
+	 * In ra thong tin can bo
+	 */
 	
 	@Override
 	public void output() {
 		super.output();
-		System.out.print(salary());
+		System.out.print(department+"  \t"+getPosition(position)+"\t"+workingTime+"\t"+salary()+"\n");
 	}
 	
+	/**
+	 * Lay ra vi tri cua nhan vien
+	 * @param: Vi tri phong ban nhap vao 1-3
+	 * @return: Vi tri tuong ung
+	 */
+	
+	public String getPosition(int x) {
+		switch (x) {
+		case 1: {
+			return "Department head" ;
+		
+		}
+		case 2:{
+			return "Vice head" ;
+			
+		}
+		default:
+			return "Staff";
+		}
+	}
+	
+	/**
+	 * Tinh luong cho can bo
+	 */
 	
 	@Override
 	public float salary() {
