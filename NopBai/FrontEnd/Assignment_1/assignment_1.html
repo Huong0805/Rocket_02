@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assignment_1.css">
+    <title></title>
+  </head>
+
+  <body>
+    <h2>Quản lý nhân viên</h2>
+    <table class="table table-striped ">
+    <thead>
+      <tr class="table-primary">
+        <th>ID</th>
+        <th>Họ tên</th>
+        <th>Khoa/Phòng ban</th>
+        <th>Trình độ/Chức vụ</th>
+        <th>Phụ cấp</th>
+        <th>Số tiết dạy</th>
+        <th>Tổng lương</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Pham Hai</td>
+        <td>Toán</td>
+        <td>Cử nhân</td>
+        <td>2000</td>
+        <td>2</td>
+        <td>7000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Dang Huong</td>
+        <td>Đào tạo</td>
+        <td>Nhân viên</td>
+        <td>2000</td>
+        <td>3</td>
+        <td>6000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Hoang Viet Thang</td>
+        <td>Lý</td>
+        <td>Cử nhân</td>
+        <td>2000</td>
+        <td>3</td>
+        <td>7000</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Nguyen Kien</td>
+        <td>Đào tạo</td>
+        <td>Phó phòng</td>
+        <td>2000</td>
+        <td>3</td>
+        <td>7000</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Tran Quyen</td>
+        <td>Đào tạo</td>
+        <td>Trưởng phòng</td>
+        <td>2000</td>
+        <td>4</td>
+        <td>10000</td>
+      </tr>
+    </tbody>
+    </table>
+
+    <div class="container">
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+      </ul>
+    </div>
+
+    <form class="form-inline" action="/action_page.php">
+      <label>Tên nhân viên:</label>
+      <input id="inputName" type="text" class="form-control" placeholder="Nhập tên nhân viên">
+    </form>
+    <br>
+
+    <button type="button" class="btn btn-success">Load Data</button>
+    <button type="button" class="btn btn-info">Thêm nhân viên</button>
+    <button type="button" class="btn btn-warning">Sắp xếp</button>
+
+  </body>
+</html>
